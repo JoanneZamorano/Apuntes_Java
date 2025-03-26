@@ -58,6 +58,7 @@ public class MainClase6 {
  */
         System.out.println("Ejercicio 4 – Evitar mostrar letras vocales con continue");
         String palabra= "PROGRAMACION";
+
         for (int i = 0; i < palabra.length(); i++){
             char letra = palabra.charAt(i);
 
