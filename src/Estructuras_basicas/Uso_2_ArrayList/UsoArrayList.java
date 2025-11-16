@@ -62,16 +62,19 @@ public class UsoArrayList {
                         System.out.println("Nombre eliminado");
                     }
                 }
-                /*case 4->{
-                    System.out.println("Introduce la posición a eliminar: ");
+                case 4->{
+                    System.out.println("Introduce el nombre a eliminar: ");
 
                     String deleteNombre=entrada.nextLine();
 
-                    if (nombre.equalsIgnoreCase(deleteNombre)){
-                        nombres.remove(nombre);
-                        System.out.println("Nombre eliminado");
+                    for (String nom:nombres){
+                        if (nom.equalsIgnoreCase(deleteNombre)){
+                            nombres.remove(nom);
+                            System.out.println("Nombre eliminado");
+                        }
                     }
-                }*/
+
+                }
                 case 0->System.out.println("...Finalizando");
                 default -> System.out.println("Opción no valida");
             }
