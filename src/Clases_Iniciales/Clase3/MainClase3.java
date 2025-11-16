@@ -1,6 +1,4 @@
-package Clase3;
-
-import java.sql.SQLOutput;
+package Clases_Iniciales.Clase3;
 
 public class MainClase3 {
     public static void main(String[] args) {

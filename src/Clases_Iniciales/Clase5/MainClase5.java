@@ -1,4 +1,4 @@
-package Clase5;
+package Clases_Iniciales.Clase5;
 
 import java.util.Scanner;
 
