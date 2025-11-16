@@ -1,4 +1,4 @@
-package Estructuras_basicas.Uso_Arrays;
+package Estructuras_basicas.Uso_1_Arrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
