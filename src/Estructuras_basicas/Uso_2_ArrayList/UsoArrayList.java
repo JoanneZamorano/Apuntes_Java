@@ -1,5 +1,7 @@
 package Estructuras_basicas.Uso_2_ArrayList;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class UsoArrayList {
@@ -29,6 +31,10 @@ public class UsoArrayList {
             System.out.println("2.Ver posición de nombres");
             System.out.println("3.Eliminar nombre por posición");
             System.out.println("4.Eliminar nombre por nombre");
+            System.out.println("5.Buscar por nombre");
+            System.out.println("6.Dar posición introduciendo un nombre");
+            System.out.println("7.Vaciar TODA la lista");
+            System.out.println("8.Ordenar lista alfabéticamente");
 
             System.out.println("0.Salir");
 
@@ -62,7 +68,7 @@ public class UsoArrayList {
                         System.out.println("Nombre eliminado");
                     }
                 }
-                case 4->{
+                case 4->{//Eliminar por nombre
                     System.out.println("Introduce el nombre a eliminar: ");
 
                     String deleteNombre=entrada.nextLine();
@@ -73,8 +79,41 @@ public class UsoArrayList {
                             System.out.println("Nombre eliminado");
                         }
                     }
+                }
+                case 5->{//Buscar por nombre
+                    System.out.println("Introduce un nombre: ");
+                    String nombreBuscar = entrada.nextLine();
+                    if (nombres.contains(nombreBuscar)){
+                        System.out.println(nombreBuscar + " está en la lista.");
+                    }else {
+                        System.out.println(nombreBuscar + "Nombre no está en la lista.");
+                    }
+                }
+                case 6->{//Dar posición introduciendo un nombre
+                    System.out.println("Introduce un nombre: ");
+                    String nombreBuscar = entrada.nextLine();
+                    int indice = nombres.indexOf(nombreBuscar);
+
+                    if (indice != -1){
+                        System.out.println("El nombre está en la posición: " + (indice+1));
+                    }else{
+                        System.out.println("El nombre no está en la lista");
+                    }
+                }
+                case 7->{//Vaciar TODA la lista
+                    nombres.clear();
+                    System.out.println("...Lista vacía");
+                }
+                case 8->{
+                    Collections.sort(nombres);
+                    System.out.println("Has ordenado la lista");
+
+                    for (String nom:nombres){
+                        System.out.println("-" + nom);
+                    }
 
                 }
+
                 case 0->System.out.println("...Finalizando");
                 default -> System.out.println("Opción no valida");
             }
