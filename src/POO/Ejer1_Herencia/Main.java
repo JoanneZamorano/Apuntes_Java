@@ -8,15 +8,12 @@ public class Main {
 
         Vehiculo[] vehiculos = {vehiculo, coche, bici};
         for(Vehiculo v:vehiculos){
-            if (v instanceof Coche){
-                System.out.println("COCHE:");
-                System.out.println("\tConsumo: " + v.consumo() + " L");
-            }else if (v instanceof Bicicleta){
-                System.out.println("BICICLETA");
-                System.out.println("\tConsumo: " + v.consumo() + " Calorias");
+            if (v instanceof Coche c){
+                System.out.println("COCHE:\n\tConsumo: " + v.consumo() + " L/KM");
+            }else if (v instanceof Bicicleta b){
+                System.out.println("BICICLETA\n\tConsumo: " + v.consumo() + " Calorías");
             }else {
-                System.out.println("Genérico:");
-                System.out.println("\tConsumo: " + v.consumo() + " L");
+                System.out.println("Genérico:\n\tConsumo: " + v.consumo() + " L");
             }
             System.out.println("\tVelocidad maxima: " + v.calcularVelocidadMaxima());
 

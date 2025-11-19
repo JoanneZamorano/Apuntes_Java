@@ -4,11 +4,11 @@ public class Vehiculo {
 
     //Metodos
     public double calcularVelocidadMaxima(){
-        System.out.println("No implementado");
+        System.out.println("\tNo implementado");
         return 0;
     }
     public double consumo(){
-        System.out.println("No implementado");
+        System.out.println("\tNo implementado");
         return 0;
     }
 
